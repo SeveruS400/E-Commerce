@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\araba_al_sat.props" />
+</Project>

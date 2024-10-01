@@ -1,0 +1,17 @@
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Services.deps.json
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Services.dll
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Services.pdb
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Entities.dll
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Repositories.dll
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Entities.pdb
+D:\Projects\araba_al_sat\Services\bin\Debug\net7.0\Repositories.pdb
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.csproj.AssemblyReference.cache
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.AssemblyInfoInputs.cache
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.AssemblyInfo.cs
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.csproj.CoreCompileInputs.cache
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.csproj.CopyComplete
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.dll
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\refint\Services.dll
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\Services.pdb
+D:\Projects\araba_al_sat\Services\obj\Debug\net7.0\ref\Services.dll

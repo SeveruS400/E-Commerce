@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kvIxopH2UlS0aO9OB155fttzNZiZcruyc/t7jbxG7NgDy71+sqxvk3hd3px5XMjtnFr13//5WneLobl0uafXaw==",
+  "dgSpecHash": "X5A+EweC3W77BCcoOD4jf97SKZQMw5EUoHnUr/B7nXB/4F4r7/YiHrgh6jlhtOwmTVOhDgYi4SwoZExORO5jog==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\araba_al_sat\\araba_al_sat\\araba_al_sat.csproj",
+  "projectFilePath": "D:\\Projects\\araba_al_sat\\araba_al_sat\\e-commerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MFK\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\MFK\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

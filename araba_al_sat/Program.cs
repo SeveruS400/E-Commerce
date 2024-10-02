@@ -1,3 +1,4 @@
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
@@ -19,6 +20,7 @@ builder.Services.AddSession(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 #region DbContext
 var provider = builder.Services.BuildServiceProvider();
@@ -42,6 +44,7 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 #endregion
 
+builder.Services.AddSingleton<Cart>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
@@ -72,6 +75,8 @@ app.UseEndpoints(endpoints =>
         pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}");
 
     endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapRazorPages();
 });
 
 

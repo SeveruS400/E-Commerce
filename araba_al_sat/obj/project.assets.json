@@ -2972,9 +2972,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\araba_al_sat\\araba_al_sat\\e-commerce.csproj",
-      "projectName": "e-commerce",
-      "projectPath": "D:\\Projects\\araba_al_sat\\araba_al_sat\\e-commerce.csproj",
+      "projectUniqueName": "D:\\Projects\\araba_al_sat\\araba_al_sat\\e_commerce.csproj",
+      "projectName": "e_commerce",
+      "projectPath": "D:\\Projects\\araba_al_sat\\araba_al_sat\\e_commerce.csproj",
       "packagesPath": "C:\\Users\\MFK\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\araba_al_sat\\araba_al_sat\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\araba_al_sat\\araba_al_sat\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\e-commerce.bundle.scp.css",
-      "PackagePath": "staticwebassets\\e-commerce.bundle.scp.css"
+      "Id": "D:\\Projects\\araba_al_sat\\araba_al_sat\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\e_commerce.bundle.scp.css",
+      "PackagePath": "staticwebassets\\e_commerce.bundle.scp.css"
     },
     {
       "Id": "D:\\Projects\\araba_al_sat\\araba_al_sat\\wwwroot\\css\\bootstrap-grid.css",
@@ -445,19 +445,19 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.e-commerce.props",
-      "PackagePath": "build\\e-commerce.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.e_commerce.props",
+      "PackagePath": "build\\e_commerce.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.e-commerce.props",
-      "PackagePath": "buildMultiTargeting\\e-commerce.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.e_commerce.props",
+      "PackagePath": "buildMultiTargeting\\e_commerce.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.e-commerce.props",
-      "PackagePath": "buildTransitive\\e-commerce.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.e_commerce.props",
+      "PackagePath": "buildTransitive\\e_commerce.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.e-commerce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.e_commerce.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     }
   ],

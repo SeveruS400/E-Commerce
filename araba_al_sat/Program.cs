@@ -1,3 +1,4 @@
+using e_commerce.Models;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
@@ -13,9 +14,12 @@ builder.Services.AddDistributedMemoryCache(); // Add in-memory caching for sessi
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout süresi
+    options.Cookie.Name = "E_Commerce.Session";
     options.Cookie.HttpOnly = true; // Güvenlik amacýyla, client-side JavaScript ile eriþimi kapatýr
     options.Cookie.IsEssential = true; // GDPR uyumluluðu için
 });
+builder.Services.AddHttpContextAccessor();
+
 #endregion
 
 // Add services to the container.
@@ -44,7 +48,7 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 #endregion
 
-builder.Services.AddSingleton<Cart>();
+builder.Services.AddScoped<Cart>(c => SessionCart.GetCart(c));
 builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
@@ -61,11 +65,11 @@ app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseRouting();
 
 app.UseAuthorization();
-app.UseSession();
 
 app.UseEndpoints(endpoints =>
 {

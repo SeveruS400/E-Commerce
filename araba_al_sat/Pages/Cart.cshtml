@@ -48,5 +48,13 @@
                 </tr>
             }
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right text-danger">
+                    @Model.Cart?.ComputeTotalValue().ToString("C2")
+                </td>
+            </tr>
+        </tfoot>
     </table>
 </div>

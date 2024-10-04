@@ -1,3 +1,4 @@
+using e_commerce.Infastructe.Extensions;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,10 +11,10 @@ namespace e_commerce.Pages
         private readonly IServiceManager _manager;
         public Cart Cart { get; set; }
 
-        public CartModel(IServiceManager manager, Cart cart)
+        public CartModel(IServiceManager manager, Cart cartService)
         {
             _manager = manager;
-            Cart = cart;
+            Cart = cartService;
         }    
         public string ReturnUrl { get; set; } = "/";
         public void OnGet(string returnUrl)
@@ -39,5 +40,20 @@ namespace e_commerce.Pages
             }
             return Page();
         }
+        public IActionResult OnPostDecrease(int Id, string returnUrl)
+        {
+            //Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            var line = Cart.Lines.FirstOrDefault(cl => cl.Products.Id.Equals(Id));
+
+            if (line != null)
+            {     
+                Cart.DecreaseQuantity(line.Products);
+                //HttpContext.Session.SetJson<Cart>("cart", Cart);
+            }
+
+            ReturnUrl = returnUrl ?? "/";
+            return Page();
+        }
+
     }
 }

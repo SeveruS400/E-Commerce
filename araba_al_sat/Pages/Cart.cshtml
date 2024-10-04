@@ -1,9 +1,7 @@
 ﻿@page "/cart"
 @model CartModel
 
-<h1>Cart</h1>
-
-Cart (@Model.Cart.Lines.Count())
+<h1>Cart (@Model.Cart.Lines.Count())</h1>
 
 <div>
     <div class="text-center display-6">
@@ -27,7 +25,26 @@ Cart (@Model.Cart.Lines.Count())
                     <td>@line.Quantity</td>
                     <td>@line.Products.Price.ToString("c")</td>
                     <td>@((line.Products.Price*line.Quantity).ToString("c2"))</td>
-                    <td></td>
+                    <td>
+                        <form method="post" asp-page-handler="Remove">
+                            <input type="hidden" name="Id" value="@line.Products.Id"/>
+                            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl"/>
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                                Remove
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Decrease">
+                            <input type="hidden" name="Id" value="@line.Products.Id" />
+                            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                                Decrease
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

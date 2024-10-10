@@ -1,5 +1,7 @@
 ﻿
 
+using System.Linq.Expressions;
+
 namespace Repositories.Contracts
 {
     public interface IRepositoryBase<T>
@@ -12,6 +14,6 @@ namespace Repositories.Contracts
         Task UpdateAsync(int Id,T entity);
         Task<bool> DeleteAsync(int Id);
         Task<bool> DeleteAllAsync();
-
+        T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges);
     }
 }

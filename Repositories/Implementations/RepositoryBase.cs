@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
+using System.Linq.Expressions;
 
 namespace Repositories.Implementations
 {
@@ -18,7 +19,6 @@ namespace Repositories.Implementations
                 ? _context.Set<T>()
                 : _context.Set<T>().AsNoTracking();
         }
-
         public Task<T?> GetByIdAsync(int Id)
         {
             return _context.Set<T>().FindAsync(Id).AsTask();
@@ -27,7 +27,6 @@ namespace Repositories.Implementations
         {
             return _context.Set<T>().FindAsync(name).AsTask();
         }
-
         public async Task CreateAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
@@ -55,7 +54,6 @@ namespace Repositories.Implementations
         //        }
         //    }
         //}
-
         public async Task UpdateAsync(int id, T entity)
         {
             var existingEntity = await _context.Set<T>().FindAsync(id);
@@ -66,8 +64,6 @@ namespace Repositories.Implementations
                 await _context.SaveChangesAsync();
             }
         }
-
-
         public async Task<bool> DeleteAsync(int id)
         {
             var entity = await _context.Set<T>().FindAsync(id);
@@ -93,5 +89,12 @@ namespace Repositories.Implementations
 
             return false;
         }
+        public T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
+        {
+            return trackChanges
+                ? _context.Set<T>().Where(expression).SingleOrDefault()
+                : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
+        }
+
     }
 }

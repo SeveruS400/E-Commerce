@@ -28,7 +28,7 @@ namespace e_commerce.Pages
             {
                 Cart.AddItem(products, 1);
             }
-            return Page();
+            return RedirectToPage(new {returnUrl = returnUrl});
         }
         public IActionResult OnPostRemove(int Id, string returnUrl)
         {

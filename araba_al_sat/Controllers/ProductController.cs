@@ -17,5 +17,10 @@ namespace araba_al_sat.Controllers
             var model = await _serviceManager.ProductService.GetAllProducts(false);
             return View(model);
         }
+        public async Task<IActionResult> Get(int Id)
+        {
+            var model = await _serviceManager.ProductService.GetOneProduct(Id, false);
+            return View(model);
+        }
     }
 }

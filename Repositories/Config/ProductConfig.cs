@@ -18,10 +18,13 @@ namespace Repositories.Config
             builder.Property(p => p.Price).IsRequired();
 
             builder.HasData(
-                new Products() { Id = 1, ProductName = "Computer", Price = 2000, CategoryId = 2, ImageUrl="/images/1.jpg" },
-                new Products() { Id = 2, ProductName = "Mouse", Price = 1000, CategoryId = 2, ImageUrl = "/images/2.jpg" },
-                new Products() { Id = 3, ProductName = "Keyboard", Price = 1000, CategoryId = 2, ImageUrl = "/images/3.jpg" },
-                new Products() { Id = 4, ProductName = "Guitar", Price = 150, CategoryId = 3, ImageUrl = "/images/4.jpg" }
+                new Products() { Id = 1, ProductName = "Computer", Price = 2000, CategoryId = 2, ImageUrl="/images/1.jpg",ShowCase=false },
+                new Products() { Id = 2, ProductName = "Mouse", Price = 1000, CategoryId = 2, ImageUrl = "/images/2.jpg", ShowCase = false },
+                new Products() { Id = 3, ProductName = "Keyboard", Price = 1000, CategoryId = 2, ImageUrl = "/images/3.jpg", ShowCase = false },
+                new Products() { Id = 4, ProductName = "Guitar", Price = 150, CategoryId = 3, ImageUrl = "/images/4.jpg", ShowCase = false },
+                new Products() { Id = 5, ProductName = "Pen", Price = 1000, CategoryId = 2, ImageUrl = "/images/2.jpg", ShowCase = true },
+                new Products() { Id = 6, ProductName = "Telephone", Price = 1000, CategoryId = 2, ImageUrl = "/images/3.jpg", ShowCase = true },
+                new Products() { Id = 7, ProductName = "Book", Price = 150, CategoryId = 3, ImageUrl = "/images/4.jpg", ShowCase = true }
                 );
         }
     }

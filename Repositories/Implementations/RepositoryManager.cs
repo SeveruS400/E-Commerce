@@ -9,7 +9,7 @@ namespace Repositories.Implementations
         private readonly DataContext _context;
         private readonly IUserRepository _userRepository;
         private readonly IProductRepository _productRepository;
-        private readonly ICategoryRepository _categorieRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly IOrderRepository _orderRepository;
 
         public RepositoryManager(DataContext context, 
@@ -21,16 +21,16 @@ namespace Repositories.Implementations
             _context = context;
             _userRepository = userRepository;
             _productRepository = productRepository;
-            _categorieRepository = categorieRepository;
+            _categoryRepository = categorieRepository;
             _orderRepository = orderRepository;
         }
         #endregion
 
         public IUserRepository User => _userRepository;
 
-        public ICategoryRepository Category => _categorieRepository;
+        public ICategoryRepository Category => _categoryRepository;
 
-        public IOrderRepository Order => throw new NotImplementedException();
+        public IOrderRepository Order => _orderRepository;
 
         IProductRepository IRepositoryManager.Product => _productRepository;
 

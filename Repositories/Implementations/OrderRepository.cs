@@ -40,8 +40,11 @@ namespace Repositories.Implementations
         public void SaveOrder(Order order)
         {
             _context.AttachRange(order.Lines.Select(o => o.Products));
-            if(order.Id ==0)
+            if(order.Id == 0)
+            {
                 _context.Orders.Add(order);
+            }
+            _context.SaveChanges();
 
         }
     }

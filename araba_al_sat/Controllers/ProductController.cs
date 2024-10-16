@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities.RequestParameters;
+using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
 namespace araba_al_sat.Controllers
@@ -12,9 +13,9 @@ namespace araba_al_sat.Controllers
             _serviceManager = serviceManager;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index(ProductRequestParameters p)
         {
-            var model = await _serviceManager.ProductService.GetAllProducts(false);
+            var model =  _serviceManager.ProductService.GetAllProductsWithDetails(p);
             return View(model);
         }
         public async Task<IActionResult> Get(int Id)

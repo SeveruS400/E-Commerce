@@ -84,7 +84,7 @@ namespace araba_al_sat.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete([FromRoute(Name = "ID")] int id)
         {
-            var product = await _serviceManager.ProductService.GetOneProduct(id, trackChanges: false);
+            var product = await _serviceManager?.ProductService.GetOneProduct(id, trackChanges: false);
             if (!string.IsNullOrEmpty(product.ImageUrl))
             {
                 // wwwroot/images/ ile başlayan yol ise, fiziksel tam dosya yolunu al
